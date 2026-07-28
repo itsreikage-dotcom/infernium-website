@@ -1,1 +1,197 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Infernium SMP</title>
 
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            color: white;
+            text-align: center;
+            background:
+                linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.85)),
+                url("https://images.unsplash.com/photo-1519608487953-e999c86e7455");
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+
+        nav {
+            padding: 20px;
+            background: rgba(10, 0, 0, 0.9);
+        }
+
+        nav a {
+            margin: 0 15px;
+            color: #ff654f;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        .hero {
+            min-height: 85vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 30px;
+        }
+
+        h1 {
+            margin: 0;
+            font-size: clamp(48px, 10vw, 100px);
+            color: #ff392e;
+            text-shadow: 0 0 20px #ff0000;
+        }
+
+        .subtitle {
+            font-size: 22px;
+            color: #dddddd;
+        }
+
+        .server-ip {
+            margin: 25px 0;
+            padding: 16px 24px;
+            border: 2px solid #ff392e;
+            border-radius: 10px;
+            background: rgba(0, 0, 0, 0.75);
+            font-size: 22px;
+        }
+
+        button,
+        .button {
+            display: inline-block;
+            margin: 8px;
+            padding: 14px 24px;
+            border: none;
+            border-radius: 8px;
+            background: #c51d16;
+            color: white;
+            font-size: 17px;
+            font-weight: bold;
+            cursor: pointer;
+            text-decoration: none;
+        }
+
+        button:hover,
+        .button:hover {
+            background: #ff392e;
+        }
+
+        section {
+            max-width: 950px;
+            margin: auto;
+            padding: 70px 25px;
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            padding: 25px;
+            border: 1px solid #5c1815;
+            border-radius: 12px;
+            background: rgba(20, 5, 5, 0.9);
+        }
+
+        footer {
+            padding: 25px;
+            background: #090000;
+            color: #999999;
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#features">Features</a>
+        <a href="#rules">Rules</a>
+        <a href="https://discord.gg/CODUL-TAU">Discord</a>
+    </nav>
+
+    <main>
+        <section class="hero" id="home">
+            <h1>INFERNIUM</h1>
+
+            <p class="subtitle">
+                Un SMP infernal, competitiv și plin de aventuri.
+            </p>
+
+            <div class="server-ip" id="serverIp">
+                play.infernium.org
+            </div>
+
+            <button onclick="copyServerIp()">Copiază IP-ul</button>
+
+            <a class="button" href="https://discord.gg/CODUL-TAU">
+                Intră pe Discord
+            </a>
+        </section>
+
+        <section id="features">
+            <h2>De ce Infernium?</h2>
+
+            <div class="cards">
+                <div class="card">
+                    <h3>⚔ PvP</h3>
+                    <p>Lupte, echipe și competiție între jucători.</p>
+                </div>
+
+                <div class="card">
+                    <h3>💰 Economie</h3>
+                    <p>Cumpără, vinde și construiește-ți imperiul.</p>
+                </div>
+
+                <div class="card">
+                    <h3>👥 Teams</h3>
+                    <p>Creează o echipă și joacă împreună cu prietenii.</p>
+                </div>
+
+                <div class="card">
+                    <h3>🔥 Evenimente</h3>
+                    <p>Participă la evenimente și câștigă recompense.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="rules">
+            <h2>Reguli principale</h2>
+
+            <p>1. Respectă jucătorii și staff-ul.</p>
+            <p>2. Nu folosi hack-uri sau alte avantaje ilegale.</p>
+            <p>3. Nu face spam sau reclamă.</p>
+            <p>4. Nu exploata bug-uri.</p>
+            <p>5. Respectă deciziile staff-ului.</p>
+        </section>
+    </main>
+
+    <footer>
+        © 2026 Infernium SMP. Toate drepturile rezervate.
+    </footer>
+
+    <script>
+        function copyServerIp() {
+            const serverIp = "play.infernium.org";
+
+            navigator.clipboard.writeText(serverIp)
+                .then(() => {
+                    alert("IP copiat: " + serverIp);
+                })
+                .catch(() => {
+                    prompt("Copiază IP-ul:", serverIp);
+                });
+        }
+    </script>
+</body>
+</html>
