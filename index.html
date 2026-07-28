@@ -1,198 +1,117 @@
 <!DOCTYPE html>
-<html lang="ro">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Infernium SMP</title>
-
-    <style>
-        * {
-            box-sizing: border-box;
-        }
-
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            color: white;
-            text-align: center;
-            background:
-                linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.85)),
-                url("https://images.unsplash.com/photo-1519608487953-e999c86e7455");
-            background-size: cover;
-            background-position: center;
-            background-attachment: fixed;
-        }
-
-        nav {
-            padding: 20px;
-            background: rgba(10, 0, 0, 0.9);
-        }
-
-        nav a {
-            margin: 0 15px;
-            color: #ff654f;
-            font-weight: bold;
-            text-decoration: none;
-        }
-
-        .hero {
-            min-height: 85vh;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            padding: 30px;
-        }
-
-        h1 {
-            margin: 0;
-            font-size: clamp(48px, 10vw, 100px);
-            color: #ff392e;
-            text-shadow: 0 0 20px #ff0000;
-        }
-
-        .subtitle {
-            font-size: 22px;
-            color: #dddddd;
-        }
-
-        .server-ip {
-            margin: 25px 0;
-            padding: 16px 24px;
-            border: 2px solid #ff392e;
-            border-radius: 10px;
-            background: rgba(0, 0, 0, 0.75);
-            font-size: 22px;
-        }
-
-        button,
-        .button {
-            display: inline-block;
-            margin: 8px;
-            padding: 14px 24px;
-            border: none;
-            border-radius: 8px;
-            background: #c51d16;
-            color: white;
-            font-size: 17px;
-            font-weight: bold;
-            cursor: pointer;
-            text-decoration: none;
-        }
-
-        button:hover,
-        .button:hover {
-            background: #ff392e;
-        }
-
-        section {
-            max-width: 950px;
-            margin: auto;
-            padding: 70px 25px;
-        }
-
-        .cards {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
-            gap: 20px;
-        }
-
-        .card {
-            padding: 25px;
-            border: 1px solid #5c1815;
-            border-radius: 12px;
-            background: rgba(20, 5, 5, 0.9);
-        }
-
-        footer {
-            padding: 25px;
-            background: #090000;
-            color: #999999;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Infernium SMP official Minecraft server website.">
+  <title>Home | Infernium SMP</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
-
 <body>
-    <nav>
-        <a href="#home">Home</a>
-        <a href="#features">Features</a>
-        <a href="#rules">Rules</a>
-        <a href="https://discord.gg/xWDe3Y3GH">Discord</a>
+<header class="site-header">
+  <div class="container navbar">
+    <a class="brand" href="index.html"><img src="images/logo.png" alt="Infernium SMP logo"></a>
+    <button class="menu-toggle" type="button" aria-label="Open navigation" aria-expanded="false">Menu</button>
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="play.html">Play</a>
+      <a href="store.html">Store</a>
+      <a href="vote.html">Vote</a>
+      <a href="rules.html">Rules</a>
+      <a href="staff.html">Staff</a>
+      <a href="wiki.html">Wiki</a>
+      <a href="changelog.html">Changelog</a>
+      <a href="contact.html">Contact</a>
+      <a class="nav-discord" href="https://discord.gg/q29dRccxE" target="_blank" rel="noopener">Discord</a>
     </nav>
+  </div>
+</header>
 
-    <main>
-        <section class="hero" id="home">
-            <h1>INFERNIUM</h1>
+<main>
+  <section class="hero">
+    <div class="hero-content">
+      <img class="hero-logo" src="images/logo.png" alt="Infernium SMP">
+      <p class="hero-subtitle">Rise from the ashes. Build your legacy. Rule Infernium.</p>
+      <div class="server-ip">play.infernium.org</div>
+      <div class="actions">
+        <a class="btn btn-primary" href="play.html">Play Now</a>
+        <button class="btn btn-secondary" type="button" data-copy-ip data-message-target="#copy-message">Copy IP</button>
+        <a class="btn btn-discord" href="https://discord.gg/q29dRccxE" target="_blank" rel="noopener">Discord</a>
+      </div>
+      <p class="copy-message" id="copy-message"></p>
+      <div class="status-strip">
+        <span class="status-pill"><span class="status-dot" data-status-dot></span><span data-server-status>Checking...</span></span>
+        <span class="status-pill">Players: <span data-player-count>—</span></span>
+        <span class="status-pill">Version: <span data-server-version>1.21.11</span></span>
+      </div>
+    </div>
+  </section>
 
-            <p class="subtitle">
-                Un SMP infernal, competitiv și plin de aventuri.
-            </p>
+  <section class="section">
+    <div class="container">
+      <p class="eyebrow center">Why Infernium?</p>
+      <h2 class="section-title">A survival world built for legends</h2>
+      <p class="section-lead">Team up, build powerful bases, master the economy and compete in events across a long-term survival world.</p>
+      <div class="grid grid-4">
+        <article class="card reveal"><div class="card-icon">⚔️</div><h3>PvP</h3><p>Fair combat, clear rules and competitive encounters.</p></article>
+        <article class="card reveal"><div class="card-icon">👥</div><h3>Teams</h3><p>Create a team, invite friends and grow together.</p></article>
+        <article class="card reveal"><div class="card-icon">💰</div><h3>Economy</h3><p>Trade resources, earn money and build your fortune.</p></article>
+        <article class="card reveal"><div class="card-icon">🎁</div><h3>Events</h3><p>Take part in giveaways, competitions and seasonal events.</p></article>
+      </div>
+    </div>
+  </section>
 
-            <div class="server-ip" id="serverIp">
-                play.infernium.org
-            </div>
+  <section class="section section-dark">
+    <div class="container">
+      <h2 class="section-title">Server at a glance</h2>
+      <div class="grid grid-4">
+        <article class="card stat reveal"><strong data-player-count>—</strong><span>Players online</span></article>
+        <article class="card stat reveal"><strong>150</strong><span>Maximum players</span></article>
+        <article class="card stat reveal"><strong>1.21.11</strong><span>Minecraft version</span></article>
+        <article class="card stat reveal"><strong>20</strong><span>Target TPS</span></article>
+      </div>
+    </div>
+  </section>
 
-            <button onclick="copyServerIp()">Copiază IP-ul</button>
+  <section class="section">
+    <div class="container">
+      <h2 class="section-title">Opening phase</h2>
+      <p class="section-lead">Infernium is being prepared for its first full season.</p>
+      <div class="grid grid-3">
+        <article class="card reveal"><p class="eyebrow">Community</p><h3>Discord is open</h3><p>Join announcements, support, suggestions and staff applications.</p></article>
+        <article class="card reveal"><p class="eyebrow">Store</p><h3>Ranks planned</h3><p>Six ranks are being prepared with balanced quality-of-life benefits.</p></article>
+        <article class="card reveal"><p class="eyebrow">Development</p><h3>More coming soon</h3><p>Voting, events, wiki guides and seasonal content will arrive next.</p></article>
+      </div>
+    </div>
+  </section>
+</main>
 
-            <a class="button" href="https://discord.gg/xWDe3Y3GH">
-                Intră pe Discord
-            </a>
-        </section>
-
-        <section id="features">
-            <h2>De ce Infernium?</h2>
-
-            <div class="cards">
-                <div class="card">
-                    <h3>⚔ PvP</h3>
-                    <p>Lupte, echipe și competiție între jucători.</p>
-                </div>
-
-                <div class="card">
-                    <h3>💰 Economie</h3>
-                    <p>Cumpără, vinde și construiește-ți imperiul.</p>
-                </div>
-
-                <div class="card">
-                    <h3>👥 Teams</h3>
-                    <p>Creează o echipă și joacă împreună cu prietenii.</p>
-                </div>
-
-                <div class="card">
-                    <h3>🔥 Evenimente</h3>
-                    <p>Participă la evenimente și câștigă recompense.</p>
-                </div>
-            </div>
-        </section>
-
-        <section id="rules">
-            <h2>Reguli principale</h2>
-
-            <p>1. Respectă jucătorii și staff-ul.</p>
-            <p>2. Nu folosi hack-uri sau alte avantaje ilegale.</p>
-            <p>3. Nu face spam sau reclamă.</p>
-            <p>4. Nu exploata bug-uri.</p>
-            <p>5. Respectă deciziile staff-ului.</p>
-        </section>
-    </main>
-
-    <footer>
-        © 2026 Infernium SMP. Toate drepturile rezervate.
-    </footer>
-
-    <script>
-        function copyServerIp() {
-            const serverIp = "play.infernium.org";
-
-            navigator.clipboard.writeText(serverIp)
-                .then(() => {
-                    alert("IP copiat: " + serverIp);
-                })
-                .catch(() => {
-                    prompt("Copiază IP-ul:", serverIp);
-                });
-        }
-    </script>
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <img class="footer-logo" src="images/logo.png" alt="Infernium SMP">
+        <p class="muted">Rise from the ashes. Build your legacy. Rule Infernium.</p>
+      </div>
+      <div>
+        <h3>Explore</h3>
+        <div class="footer-links">
+          <a href="play.html">Play</a><a href="store.html">Store</a><a href="rules.html">Rules</a><a href="wiki.html">Wiki</a>
+        </div>
+      </div>
+      <div>
+        <h3>Community</h3>
+        <div class="footer-links">
+          <a href="https://discord.gg/q29dRccxE" target="_blank" rel="noopener">Discord</a>
+          <a href="https://www.tiktok.com/@infernium.smp?is_from_webapp=1&sender_device=pc" target="_blank" rel="noopener">TikTok</a>
+          <a href="https://www.youtube.com/@%E5%BD%B1%E9%9B%B6-y7g2w" target="_blank" rel="noopener">YouTube</a>
+          <a href="mailto:itsreikage@gmail.com">Email</a>
+        </div>
+      </div>
+    </div>
+    <p class="copyright">© <span data-year></span> Infernium SMP. Not affiliated with Mojang Studios or Microsoft.</p>
+  </div>
+</footer>
+<script src="js/script.js"></script>
 </body>
 </html>
-Add Infernium website
